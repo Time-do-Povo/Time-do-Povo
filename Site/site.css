@@ -117,6 +117,8 @@ main img {
     transition: 0.3s;
     font-size: 20px;
     font-weight: 800;
+    display: flex;
+    justify-content: center;
 }
 main a:hover {
     opacity: 0.7;
@@ -126,11 +128,17 @@ main a:hover {
     margin-top: 10rem;
 }
 
+.caixa-texto{
+        display: flex;
+        flex-direction: column;
+        width: 800px;
+        
+}
 .inicio-texto p{
     font-size: 30px;
     font-family: 'Inter';
     color: #f8f7f0;
-    text-align: justify;
+    text-align: center;
     justify-content: center;
 }
 
@@ -145,33 +153,37 @@ main a:hover {
 }
 .inicio-texto h2{
     letter-spacing: 1px;
-    font-size: 45px;
+    font-size: 40px;
     font-family: 'Montserrat';
     color: #f8f7f0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.imagens-cirulares img {
+.imagem-selfie img {
     max-width: fit-content;
-    margin-left: 47rem;
+    width: 600px;
+    height: auto;
 
 }
 
-.sobrenos {
+.torcida {
     margin-top: 7rem;
     display: flex;
     flex-direction: row;
     font-family: 'Inter','Montserrat';
+    
 }
-.texto-sobrenos {
+.texto-torcida {
 
     margin-right: 10rem;
+    
+    
 }
 
 
 
-.texto-sobrenos h1{
+.texto-torcida h1{
     color: #ffffff;
     font-size: 48px;
     font-weight: 800;
@@ -179,16 +191,178 @@ main a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    margin-left: 150px;
 }
 
 
-.texto-sobrenos p {
+.texto-torcida p {
     line-height: 1.8rem;
     margin-top: 1rem;
     color: #ffffff;
     font-size: 35px;
     font-family: 'Inter';
+    margin-left: 100px;
     text-align: justify;
+}
+
+/* oiiiiiiiiiiiiiiiiiiiiiiiiiiiiii */
+
+.imagem-historia img {
+    max-width: fit-content;
+    width: 650px;
+    height: 450px;
+
+}
+
+.historia {
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Inter','Montserrat';
+    
+}
+.texto-historia {
+
+    margin-right: 10rem;
+
+    
+}
+
+
+
+.texto-historia h1{
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 800;
+    font-family: 'Montserrat';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 150px;
+}
+
+
+.texto-historia p {
+    line-height: 1.8rem;
+    margin-top: 1rem;
+    color: #ffffff;
+    font-size: 35px;
+    font-family: 'Inter';
+    margin-left: 100px;
+    text-align: justify;
+    font-size: 25px;
+}
+
+/* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
+
+
+.imagem-2012 img {
+    max-width: fit-content;
+    width: 600px;
+    height: 400px;
+
+}
+
+.ano-2012 {
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Inter','Montserrat';
+    
+}
+.texto-ano-2012 {
+
+    margin-right: 10rem;
+    
+    
+}
+
+
+
+.texto-ano-2012 h1{
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 800;
+    font-family: 'Montserrat';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 150px;
+}
+
+
+.texto-ano-2012 p {
+    line-height: 1.8rem;
+    margin-top: 1rem;
+    color: #ffffff;
+    font-size: 35px;
+    font-family: 'Inter';
+    margin-left: 100px;
+    text-align: justify;
+    font-size: 26px;
+}
+
+.idolos{
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter','Montserrat';
+}
+
+.texto-idolos h1{
+    color: #000000;
+    font-size: 40px;
+    font-weight: 800;
+    font-family: 'Montserrat';
+    display: flex;
     margin-left: 100px;
 }
 
+
+.texto-idolos p {
+    line-height: 1.8rem;
+    margin-top: 1rem;
+    color: #000000;
+    font-size: 35px;
+    font-family: 'Inter';
+    margin-left: 100px;
+    font-size: 26px;
+    width: 900px;
+}
+
+.fotos-linha1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.foto-idolos-linha1 img{
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+.nome-jogadores-linha1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.nome-jogadores1{
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+/* .textos-idolos-linha1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.textos-idolos1{
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    font-family: inter;
+} */
