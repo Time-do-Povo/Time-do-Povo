@@ -348,14 +348,30 @@ main a:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    
 }
 .nome-jogadores1{
+    border: none;
+    background-color: #000000;
     border-radius: 10px;
-    width: 200px;
-    height: 200px;
+    padding: 0.2rem 0.5rem;
+    margin-left: 32px;
+    margin-right: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    height: 2.8rem;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Inter';
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: 0.5s;
+    text-align: center;
 }
 
-/* .textos-idolos-linha1{
+.textos-idolos-linha1{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -365,4 +381,105 @@ main a:hover {
     width: 300px;
     height: 200px;
     font-family: inter;
-} */
+}
+.fotos-linha2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.foto-idolos-linha2 img{
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+.nome-jogadores-linha2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.nome-jogadores2{
+    border: none;
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 0.2rem 0.5rem;
+    margin-left: 32px;
+    margin-right: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    height: 2.8rem;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Inter';
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.textos-idolos-linha2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.textos-idolos2{
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    font-family: inter;
+}
+
+.texto-elenco{
+    line-height: 1.8rem;
+    margin-top: 5rem;
+    color: #000000;
+    font-size: 35px;
+    font-family: 'Inter';
+    margin-left: 300px;
+    font-size: 26px;
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.carousel-container {
+    width: 600px; /* Defina a largura do seu carrossel */
+    overflow: hidden; /* Oculta as imagens que estiverem fora do contêiner */
+    position: relative; /* Posição relativa para botões de navegação */
+  }
+  
+  .carousel-slide {
+    display: flex; /* Permite que as imagens sejam exibidas uma ao lado da outra */
+    transition: transform 0.5s ease-in-out; /* Adiciona uma transição suave ao carrossel */
+  }
+  
+  .carousel-slide img {
+    width: 200px; /* Assegura que as imagens ocupem toda a largura do contêiner */
+    object-fit: cover; /* Mantém a proporção da imagem */
+  }
+  
+  .carousel-prev,
+  .carousel-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    z-index: 1;
+  }
+  
+  .carousel-prev {
+    left: 0;
+  }
+  
+  .carousel-next {
+    right: 0;
+  }
+  
