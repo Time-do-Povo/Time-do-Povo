@@ -447,9 +447,9 @@ main a:hover {
 }
 
 .carousel-container {
-    width: 600px; /* Defina a largura do seu carrossel */
+    width: 16500px; /* Defina a largura do seu carrossel */
     overflow: hidden; /* Oculta as imagens que estiverem fora do contêiner */
-    position: relative; /* Posição relativa para botões de navegação */
+    position:relative ; /* Posição relativa para botões de navegação */
   }
   
   .carousel-slide {
@@ -458,8 +458,9 @@ main a:hover {
   }
   
   .carousel-slide img {
-    width: 200px; /* Assegura que as imagens ocupem toda a largura do contêiner */
-    object-fit: cover; /* Mantém a proporção da imagem */
+    width: 500px;
+     /* Assegura que as imagens ocupem toda a largura do contêiner */
+    object-fit: scale-down; /* Mantém a proporção da imagem */
   }
   
   .carousel-prev,
@@ -480,6 +481,6 @@ main a:hover {
   }
   
   .carousel-next {
-    right: 0;
+    right: 15000px;
   }
   

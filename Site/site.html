@@ -192,7 +192,7 @@
                     <p><b>Emerson Sheik</b></p>
                 </div>
             </div>
-
+            <br>
             <div class="textos-idolos-linha2">
                 <div class="textos-idolos2"><b>
                         <li>Nome Completo:José Ferreira Neto</li>
@@ -229,21 +229,52 @@
                 </div>
             </div>
             <br><br>
-            <div id="scroll_4" class="texto-elenco">
+            <div id="scroll_4"></div><br><br><br><br>
+            <div class="texto-elenco">
                 <h1><b>Elenco Atual</b></h1>
             </div>
 
             <div class="carousel-container">
                 <div class="carousel-slide">
-                  <img src="img/img elenco/img.cassio.elenco.png" alt="Imagem 1">
-                  <img src="img/img elenco/img.carlosMiguel.elenco.png" alt="Imagem 2">
-                  <img src="img/img elenco/img.donelli.elenco.png" alt="Imagem 3">
-                  <!-- Adicione mais imagens conforme necessário -->
+                    <img src="img/img elenco/Carrosel-cassio.png" alt="Imagem 1">
+                    <img src="img/img elenco/Carrossel-CarlosM.png" alt="Imagem 2">
+                    <img src="img/img elenco/Carrossel-Donelli.png" alt="Imagem 3">
+                    <img src="img/img elenco/Carrossel-Caetano.png" alt="Imagem 4">
+                    <img src="img/img elenco/Carrossel-Felix.png" alt="Imagem 5">
+                    <img src="img/img elenco/Carroessel-GustavoH.png" alt="Imagem 6">
+                    <img src="img/img elenco/Carrossel-JoapP.png" alt="Imagem 6">
+                    <img src="img/img elenco/Carroessel-RaulG.png" alt="Imagem 7">
+                    <img src="img/img elenco/Carrossel-Ccá.png" alt="Imagem 8">
+                    <img src="img/img elenco/Carrossel-Fagner.png" alt="Imagem 9">
+                    <img src="img/img elenco/Carrossel-Matheuzinho.png" alt="Imagem 10">
+                    <img src="img/img elenco/Carrossel-Palacios.png" alt="Imagem 11">
+                    <img src="img/img elenco/Carrossel-Hugp.png" alt="Imagem 12">
+                    <img src="img/img elenco/Carrossel-Bidu.png" alt="Imagem 13">
+                    <img src="img/img elenco/Carrossel-Raniele.png" alt="Imagem 14">
+                    <img src="img/img elenco/Carrossel-Maycon.png" alt="Imagem 15">
+                    <img src="img/img elenco/Carrossel-Fausto.png" alt="Imagem 16">
+                    <img src="img/img elenco/Carrossel-Ryan.png" alt="Imagem 17">
+                    <img src="img/img elenco/Carrossel-Ruan.png" alt="Imagem 18">
+                    <img src="img/img elenco/Carrossel-Coronado.png" alt="Imagem 19">
+                    <img src="img/img elenco/Carrossel-MatheusA.png" alt="Imagem 20">
+                    <img src="img/img elenco/Carrossel-Paulinho.png" alt="Imagem 21">
+                    <img src="img/img elenco/Carrossel-Garro.png" alt="Imagem 22">
+                    <img src="img/img elenco/Carrossel-Biro.png" alt="Imagem 23">
+                    <img src="img/img elenco/Carrossel-Romero.png" alt="Imagem 24">
+                    <img src="img/img elenco/Carrossel-Giovane.png" alt="Imagem 25">
+                    <img src="img/img elenco/Carrossel-Giovane.png" alt="Imagem 26">
+                    <img src="img/img elenco/Carrossel-PedroH.png" alt="Imagem 27">
+                    <img src="img/img elenco/Carrossel-Wesley.png" alt="Imagem 28">
+                    <img src="img/img elenco/Carrossel-Mosquito.png" alt="Imagem 29">
+                    <img src="img/img elenco/Carrossel-ArthurS.png" alt="Imagem 30">
+                    <img src="img/img elenco/Carrossel-YuriA.png" alt="Imagem 31">
+                    <img src="img/img elenco/Carrossel-PedroR.png" alt="Imagem 32">
+                    <!-- Adicione mais imagens conforme necessário -->
                 </div>
                 <button class="carousel-prev">&lt;</button>
                 <button class="carousel-next">&gt;</button>
-              </div>
-              
+            </div>
+
 
 
             <br><br><br>
@@ -255,23 +286,23 @@
 </html>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-  const prevBtn = document.querySelector('.carousel-prev');
-  const nextBtn = document.querySelector('.carousel-next');
-  const slide = document.querySelector('.carousel-slide');
-  let counter = 0;
+    document.addEventListener("DOMContentLoaded", function () {
+        const prevBtn = document.querySelector('.carousel-prev');
+        const nextBtn = document.querySelector('.carousel-next');
+        const slide = document.querySelector('.carousel-slide');
+        let counter = 0;
 
-  prevBtn.addEventListener('click', () => {
-    counter--;
-    if (counter < 0) counter = 0;
-    slide.style.transform = `translateX(${-counter * 200}px)`; // 200 é a largura de cada imagem
-  });
+        prevBtn.addEventListener('click', () => {
+            counter--;
+            if (counter < 0) counter = 0;
+            slide.style.transform = `translateX(${-counter * 1500}px)`; // 200 é a largura de cada imagem
+        });
 
-  nextBtn.addEventListener('click', () => {
-    counter++;
-    if (counter > 2) counter = 2;
-    slide.style.transform = `translateX(${-counter * 200}px)`; // 200 é a largura de cada imagem
-  });
-});
+        nextBtn.addEventListener('click', () => {
+            counter++;
+            if (counter > 2) counter = 2;
+            slide.style.transform = `translateX(${-counter * 1500}px)`; // 200 é a largura de cada imagem
+        });
+    });
 
 </script>
