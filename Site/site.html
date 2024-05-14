@@ -234,8 +234,8 @@
                 <h1><b>Elenco Atual</b></h1>
             </div>
 
-            <div class="carousel-container">
-                <div class="carousel-slide">
+            <div class="carousel">
+                <div class="carousel-inner">
                     <img src="img/img elenco/Carrosel-cassio.png" alt="Imagem 1">
                     <img src="img/img elenco/Carrossel-CarlosM.png" alt="Imagem 2">
                     <img src="img/img elenco/Carrossel-Donelli.png" alt="Imagem 3">
@@ -271,38 +271,64 @@
                     <img src="img/img elenco/Carrossel-PedroR.png" alt="Imagem 32">
                     <!-- Adicione mais imagens conforme necessário -->
                 </div>
-                <button class="carousel-prev">&lt;</button>
-                <button class="carousel-next">&gt;</button>
+                <button class="prev">&lt;</button>
+                <button class="next">&gt;</button>
             </div>
-
-
-
             <br><br><br>
         </div>
-
+        <div class="footer">
+            <div class="img-footer">
+                <img src="img/Projeto Individual (2).png" alt="">
+            </div>
+        </div>
 
 </body>
 
 </html>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const prevBtn = document.querySelector('.carousel-prev');
-        const nextBtn = document.querySelector('.carousel-next');
-        const slide = document.querySelector('.carousel-slide');
-        let counter = 0;
 
-        prevBtn.addEventListener('click', () => {
-            counter--;
-            if (counter < 0) counter = 0;
-            slide.style.transform = `translateX(${-counter * 1500}px)`; // 200 é a largura de cada imagem
-        });
+    const carouselInner = document.querySelector('.carousel-inner');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    const images = document.querySelectorAll('.carousel-inner img');
+    let currentIndex = 0;
+    let imagesPerSlide = 3;
 
-        nextBtn.addEventListener('click', () => {
-            counter++;
-            if (counter > 2) counter = 2;
-            slide.style.transform = `translateX(${-counter * 1500}px)`; // 200 é a largura de cada imagem
-        });
+    prevButton.addEventListener('click', () => {
+        currentIndex -= imagesPerSlide;
+        updateCarousel();
     });
+
+    nextButton.addEventListener('click', () => {
+        currentIndex += imagesPerSlide;
+        updateCarousel();
+    });
+
+    function updateCarousel() {
+        const translateX = currentIndex * -298; // adjust the value based on your image width
+        carouselInner.style.transform = `translateX(${translateX}px)`;
+    }
+
+    updateCarousel();
+
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     const prevBtn = document.querySelector('.carousel-prev');
+    //     const nextBtn = document.querySelector('.carousel-next');
+    //     const slide = document.querySelector('.carousel-slide');
+    //     let counter = 0;
+
+    //     prevBtn.addEventListener('click', () => {
+    //         counter--;
+    //         if (counter < 0) counter = 0;
+    //         slide.style.transform = `translateX(${-counter * 1500}px)`;
+    //     });
+
+    //     nextBtn.addEventListener('click', () => {
+    //         counter++;
+    //         if (counter > 2) counter = 2;
+    //         slide.style.transform = `translateX(${-counter * 1500}px)`;
+    //     });
+    // });
 
 </script>

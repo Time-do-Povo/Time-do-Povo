@@ -446,21 +446,21 @@ main a:hover {
     text-align: center;
 }
 
-.carousel-container {
-    width: 16500px; /* Defina a largura do seu carrossel */
-    overflow: hidden; /* Oculta as imagens que estiverem fora do contêiner */
-    position:relative ; /* Posição relativa para botões de navegação */
+/* .carousel-container {
+    width: 16500px; 
+    overflow: hidden; 
+    position:relative ; 
   }
   
   .carousel-slide {
-    display: flex; /* Permite que as imagens sejam exibidas uma ao lado da outra */
-    transition: transform 0.5s ease-in-out; /* Adiciona uma transição suave ao carrossel */
+    display: flex;
+    transition: transform 0.5s ease-in-out; 
   }
   
   .carousel-slide img {
     width: 500px;
-     /* Assegura que as imagens ocupem toda a largura do contêiner */
-    object-fit: scale-down; /* Mantém a proporção da imagem */
+    
+    object-fit: scale-down;
   }
   
   .carousel-prev,
@@ -483,4 +483,48 @@ main a:hover {
   .carousel-next {
     right: 15000px;
   }
-  
+   */
+
+   /* styles.css */
+.carousel {
+    position: relative;
+    width: 880px;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    /* flex-wrap: nowrap; */
+    justify-content: space-between;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-inner img {
+    width: 500px;
+    height: 250px;
+    margin: 10px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border: none;
+    z-index: 1;
+}
+
+.prev {
+    left: 1px;
+}
+
+.next {
+    right: 1px;
+}
+
