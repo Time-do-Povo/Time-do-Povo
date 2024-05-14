@@ -528,3 +528,16 @@ main a:hover {
     right: 1px;
 }
 
+.footer img{
+    width: 400px;
+    height: 250px;
+    display: flex;
+    margin-left: 550px;
+}
+
+.footer-texto{
+    font-family: 'Inter';
+    color: #ffffff;
+    font-size: 10px;
+    margin-left: 410px;
+}
