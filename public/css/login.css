@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+    background-color: black;
+}
+
+.box-cadastro {
+    width: 800px;
+    height: 490px;
+    border-radius: 20px;
+    border: 2px solid #daa520;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-r {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-top-right-radius: 19px;
+    border-bottom-right-radius: 19px;
+    flex-direction:column
+}
+.box-r img {
+    width: 300px;
+}
+.box-r a{
+    font-family: 'Inter';
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+.linha {
+    width: 2px;
+    height: 100%;
+    background-color: #daa520;
+    ;
+}
+.box-l {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.box-input {
+    margin-left: 55px;
+}
+.box-input p {
+    color: white;
+    font-family: 'Montserrat';
+    margin: 14px;
+}
+.box-input input {
+    width: 280px;
+    border: none;
+    height: 20px;
+    border-bottom: 1px solid #daa520;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+}
+
+.box-input input:focus {
+    outline: none;
+}
+.box-l button {
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    border: 1px solid #daa520;
+    background-color: transparent;
+    color: #daa520;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-left: 50px;
+    font-family: 'Inter';
+    transition: 0.7s;
+}
+
+.box-l button:hover{
+    background-color: white;
+}
