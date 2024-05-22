@@ -4,28 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastre-se | Time do Povo</title>
-    <link rel="stylesheet" href="./css/cadastro.css">
-    <link rel="icon" href="img/Projeto Individual (2).png">
+    <link rel="stylesheet" href="./cadastro.css">
+    <link rel="icon" href="IMG/Projeto Individual (2).png">
 </head>
 <body>
     <div class="box-cadastro">
         <div class="box-l">
-            <img src="img/Projeto Individual (2).png" alt="">
-            <a href="./index.html">Home</a>
+            <img src="IMG/Projeto Individual (2).png" alt="">
+            <a href="../SITE/index.html">Home</a>
         </div>
         <div class="linha"></div>
         <div class="box-r">
             <div class="box-input">
                 <p>Nome completo:</p>
-                <input type="text">
+                <input type="text" id="input_nome">
                 <p>Email:</p>
-                <input type="text">
+                <input type="text" id="input_email">
                 <p>Senha:</p>
-                <input type="text">
+                <input type="password" id="input_senha">
                 <p>Confirmar senha:</p>
-                <input type="text">
+                <input type="password" id="input_confirmar_senha">
                 <p>Apelido ou como quer ser chamado:</p>
-                <input type="text">
+                <input type="text" id="input_apelido">
             </div>
             <button onclick="cad()"> <b> Cadastrar</b></button>
         </div>
@@ -34,5 +34,17 @@
 </html>
 
 <script>
-    
+    function cad(){
+        const nome = input_nome.value;
+        const email = input.email.value;
+        const senha = input_senha;
+        const confirmarSenha = input_confirmar_senha.value;
+        const apelido = input_apelido.value;
+
+        if(nome == '' || email == '' || senha == '' || confirmarSenha == '' || apelido == ''){
+            alert("Preenchea todos os campos")
+        }else {
+            window.location.href = '../QUIZ/quiz.html'; 
+        }
+    }
 </script>
