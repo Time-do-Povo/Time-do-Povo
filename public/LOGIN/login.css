@@ -62,6 +62,11 @@ body{
     font-family: 'Montserrat';
     margin: 14px;
 }
+
+.box-input p a{
+    color: white;
+}
+
 .box-input input {
     width: 280px;
     border: none;
