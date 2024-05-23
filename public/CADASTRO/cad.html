@@ -36,15 +36,33 @@
 <script>
     function cad(){
         const nome = input_nome.value;
-        const email = input.email.value;
-        const senha = input_senha;
+        const email = input_email.value;
+        const senha = input_senha.value;
         const confirmarSenha = input_confirmar_senha.value;
         const apelido = input_apelido.value;
 
         if(nome == '' || email == '' || senha == '' || confirmarSenha == '' || apelido == ''){
             alert("Preenchea todos os campos")
+
         }else {
-            window.location.href = '../QUIZ/quiz.html'; 
+            fetch("../usuarios/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "appLication/json"
+                },
+                body: JSON.stringify({
+                    nomeServer: nome,
+                    emailServer: email,
+                    senhaServer: senha
+                })
+            }).then(function (resposta)
+                {
+                    console.log("Resposta do cadastro", resposta)
+                }).catch (function (erro)
+                    {
+                        console.log("Erro", erro)
+                    })
+            window.location.href = '../LOGIN/login.html'; 
         }
     }
 </script>

@@ -15,12 +15,12 @@
             <div class="box-input">
 
                 <p>Email:</p>
-                <input type="text">
+                <input type="text" id="email_Login">
                 <p>Senha:</p>
-                <input type="text">
+                <input type="password" id="senha_Login">
                 <br><br><br>
                 <p>Não tem uma conta?  <a href="../CADASTRO/cad.html">Cadastre-se</a></p>
-                <button onclick="cad()"> <b> Entrar</b></button>
+                <button onclick="login()"> <b> Entrar</b></button>
             </div>
             <div class="">
 
@@ -35,3 +35,47 @@
 </body>
 
 </html>
+
+<script>
+    function login (){
+        const emailLogin = email_Login.value
+        const senhaLogin = senha_Login.value
+
+        if( emailLogin == '' || senhaLogin == '' ){
+            alert("Preenchea todos os campos")
+    }else{
+        fetch("../usuarios/autenticar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "appLication/json"
+                },
+                body: JSON.stringify({
+                    emailServer: emailLogin,
+                    senhaServer: senhaLogin
+                })
+            }).then(function (resposta) {
+
+                    console.log("Resposta do cadastro", resposta)
+                    if (resposta.ok) {
+                console.log(resposta);
+                window.location.href = '../QUIZ/quiz.html'; 
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    
+
+                })};
+                }).catch (function (erro)
+                    {
+                        console.log("Erro", erro)
+                    })
+            
+
+    }
+    }
+
+</script>

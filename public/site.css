@@ -1,0 +1,569 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.linha {
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+}
+header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+body {
+    background-color: #000;
+}
+nav a {
+    letter-spacing: 1px;
+    color: #000000;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 20px;
+}
+nav button a{
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 20px;
+}
+
+nav a:hover {
+    color: #daa520;
+}
+nav button a:hover{
+    background-color: #1f2225;
+} 
+nav img:hover {
+    opacity: 0.8;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Inter';
+    font-weight: 600;
+    background-color: #f8f7f0;
+    height: 17vh;
+}
+
+nav img{
+        max-width: 10rem;
+        margin-left: 32px;
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+    margin-right: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-button {
+    border: none;
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 0.4rem 1rem;
+    margin-left: 32px;
+    margin-right: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    height: 3rem;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Inter';
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: 0.5s;
+}
+.nav-button:hover {
+    background-color: #1f2225;
+}
+main {
+    background-image: url('../SITE/img/img.torcida.png');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+   
+}
+
+main img {
+    width: 100%;
+    height: 80vh;
+}
+.inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    
+}
+.inicio-texto a{
+    font-family: 'Inter';
+    letter-spacing: 1px;
+    color: #F8F7F0;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 20px;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+}
+main a:hover {
+    opacity: 0.7;
+}
+
+.inicio-texto {
+    margin-top: 10rem;
+}
+
+.caixa-texto{
+        display: flex;
+        flex-direction: column;
+        width: 800px;
+        
+}
+.inicio-texto p{
+    font-size: 30px;
+    font-family: 'Inter';
+    color: #f8f7f0;
+    text-align: center;
+    justify-content: center;
+}
+
+.inicio-texto h1{
+    letter-spacing: 1px;
+    font-size: 70px;
+    font-family: 'Montserrat';
+    color: #f8f7f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inicio-texto h2{
+    letter-spacing: 1px;
+    font-size: 40px;
+    font-family: 'Montserrat';
+    color: #f8f7f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imagem-selfie img {
+    max-width: fit-content;
+    width: 600px;
+    height: auto;
+
+}
+
+.torcida {
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Inter','Montserrat';
+    
+}
+.texto-torcida {
+
+    margin-right: 10rem;
+    
+    
+}
+
+
+
+.texto-torcida h1{
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 800;
+    font-family: 'Montserrat';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 150px;
+}
+
+
+.texto-torcida p {
+    line-height: 1.8rem;
+    margin-top: 1rem;
+    color: #ffffff;
+    font-size: 35px;
+    font-family: 'Inter';
+    margin-left: 100px;
+    text-align: justify;
+}
+
+/* oiiiiiiiiiiiiiiiiiiiiiiiiiiiiii */
+
+.imagem-historia img {
+    max-width: fit-content;
+    width: 650px;
+    height: 450px;
+
+}
+
+.historia {
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Inter','Montserrat';
+    
+}
+.texto-historia {
+
+    margin-right: 10rem;
+
+    
+}
+
+
+
+.texto-historia h1{
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 800;
+    font-family: 'Montserrat';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 150px;
+}
+
+
+.texto-historia p {
+    line-height: 1.8rem;
+    margin-top: 1rem;
+    color: #ffffff;
+    font-size: 35px;
+    font-family: 'Inter';
+    margin-left: 100px;
+    text-align: justify;
+    font-size: 25px;
+}
+
+/* IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
+
+
+.imagem-2012 img {
+    max-width: fit-content;
+    width: 600px;
+    height: 400px;
+
+}
+
+.ano-2012 {
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Inter','Montserrat';
+    
+}
+.texto-ano-2012 {
+
+    margin-right: 10rem;
+    
+    
+}
+
+
+
+.texto-ano-2012 h1{
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 800;
+    font-family: 'Montserrat';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 150px;
+}
+
+
+.texto-ano-2012 p {
+    line-height: 1.8rem;
+    margin-top: 1rem;
+    color: #ffffff;
+    font-size: 35px;
+    font-family: 'Inter';
+    margin-left: 100px;
+    text-align: justify;
+    font-size: 26px;
+}
+
+.idolos{
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter','Montserrat';
+}
+
+.texto-idolos h1{
+    color: #000000;
+    font-size: 40px;
+    font-weight: 800;
+    font-family: 'Montserrat';
+    display: flex;
+    margin-left: 100px;
+}
+
+
+.texto-idolos p {
+    line-height: 1.8rem;
+    margin-top: 1rem;
+    color: #000000;
+    font-size: 35px;
+    font-family: 'Inter';
+    margin-left: 100px;
+    font-size: 26px;
+    width: 900px;
+}
+
+.fotos-linha1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.foto-idolos-linha1 img{
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+.nome-jogadores-linha1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.nome-jogadores1{
+    border: none;
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 0.2rem 0.5rem;
+    margin-left: 32px;
+    margin-right: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    height: 2.8rem;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Inter';
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.textos-idolos-linha1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.textos-idolos1{
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    font-family: inter;
+}
+.fotos-linha2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.foto-idolos-linha2 img{
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+.nome-jogadores-linha2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.nome-jogadores2{
+    border: none;
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 0.2rem 0.5rem;
+    margin-left: 32px;
+    margin-right: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    height: 2.8rem;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Inter';
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.textos-idolos-linha2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.textos-idolos2{
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    font-family: inter;
+}
+
+.texto-elenco{
+    line-height: 1.8rem;
+    margin-top: 5rem;
+    color: #000000;
+    font-size: 35px;
+    font-family: 'Inter';
+    margin-left: 300px;
+    font-size: 26px;
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* .carousel-container {
+    width: 16500px; 
+    overflow: hidden; 
+    position:relative ; 
+  }
+  
+  .carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out; 
+  }
+  
+  .carousel-slide img {
+    width: 500px;
+    
+    object-fit: scale-down;
+  }
+  
+  .carousel-prev,
+  .carousel-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    z-index: 1;
+  }
+  
+  .carousel-prev {
+    left: 0;
+  }
+  
+  .carousel-next {
+    right: 15000px;
+  }
+   */
+
+   /* styles.css */
+.carousel {
+    position: relative;
+    width: 880px;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    /* flex-wrap: nowrap; */
+    justify-content: space-between;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-inner img {
+    width: 500px;
+    height: 250px;
+    margin: 10px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border: none;
+    z-index: 1;
+}
+
+.prev {
+    left: 1px;
+}
+
+.next {
+    right: 1px;
+}
+
+.footer img{
+    position: relative;
+    top: -50px;
+    width: 400px;
+    height: 250px;
+    display: flex;
+    margin-left: 550px;
+}
+
+.footer-texto{
+    position: relative;
+    top: -50px;
+    font-family: 'Inter';
+    color: #ffffff;
+    font-size: 10px;
+    margin-left: 410px;
+}
+.contato{
+    font-family: 'Inter';
+    font-size: 10px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+    color: #ffffff;
+}
+
+.contato h2 {
+    position: relative;
+    top: 100px;
+}

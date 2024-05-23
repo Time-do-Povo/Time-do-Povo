@@ -18,15 +18,20 @@
 
         </div>
         <nav>
-            <a href="">
-                <img src="img/Protótipo Site Individual.png" alt="">
+            <a href="../SITE/index.html">
+                <img src="img/logoBranco.png" alt="">
             </a>
             <ul class="nav-list">
                 <li><a href="">Quiz</a></li>
                 <li><a href="">&</a></li>
                 <li><a href="">Ranking</a></li>
             </ul>
-                
+        <div class="usuario">
+            <a href="">
+                <img src="IMG/Protótipo Site Individual.png" alt="">
+                <p id="nomeU"></p>
+            </a>
+        </div>
         </nav>
     </header>
 
@@ -52,6 +57,9 @@
 </html>
 
 <script>
+    let nomeUsuario = sessionStorage.NOME_USUARIO
+    nomeU.innerHTML = nomeUsuario
+
     function comecarQuiz() {
 
     }
