@@ -26,41 +26,57 @@
                 <li><a href="">&</a></li>
                 <li><a href="">Ranking</a></li>
             </ul>
-        <div class="usuario">
-            <a href="">
-                <img src="IMG/Protótipo Site Individual.png" alt="">
-                <p id="nomeU"></p>
-            </a>
-        </div>
+            <div class="usuario">
+                <a href="">
+                    <img src="IMG/Protótipo Site Individual.png" alt="">
+                    <p id="nomeU"></p>
+                </a>
+            </div>
         </nav>
     </header>
 
     <main>
         <div class="box-quiz">
-            <div class="texto-quiz">
-                <p><b>Este quiz foi feito para testar seus conhecimentos sobre o Sport Clube Corinthians Paulista
-                        <br><br><br> Após responder as 10 perguntas, você poderá ver o seu resultado e o dos demais
-                        participantes</b> </p>
+            <div id="boxParte2" class="quiz" style="display: none;">
+                <h2 id="question"8>Question goes here</h2>
+                <div id="answer-buttons">
+                    <button class="btn">Answer 1</button>
+                    <button class="btn">Answer 2</button>
+                    <button class="btn">Answer 3</button>
+                    <button class="btn">Answer 4</button>
+                </div>
+                <button id="next-btn">Next</button>
             </div>
-            <div class="botao-iniciar">
-                <button onclick="comecarQuiz()"><b>Iniciar</b></button>
-            </div>
+            <div id="boxParte1">
+                <div class="texto-quiz">
+                    <p><b>Este quiz foi feito para testar seus conhecimentos sobre o Sport Clube Corinthians Paulista
+                            <br><br><br> Após responder as 10 perguntas, você poderá ver o seu resultado e o dos demais
+                            participantes</b> </p>
+                </div>
+                <div class="botao-iniciar">
+                    <button onclick="comecarQuiz()"><b>Iniciar</b></button>
+                </div>
+            </div> 
+
+            
         </div>
 
         <div class="box-rank">
-           
-        </div>
 
+        </div>
+        <script src="quiz.js"></script>
     </main>
 </body>
 
 </html>
 
 <script>
-    let nomeUsuario = sessionStorage.NOME_USUARIO
+    let nomeUsuario = sessionStorage.APELIDO_USUARIO
     nomeU.innerHTML = nomeUsuario
 
     function comecarQuiz() {
-
+        boxParte1.style.display = "none"
+        boxParte2.style.display = "block"
     }
+    
 </script>

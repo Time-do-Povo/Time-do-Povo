@@ -314,7 +314,92 @@ main a:hover {
     font-size: 26px;
 }
 
-.idolos{
+
+.card-cima{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    height: 350px;
+    position: relative;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 2.5s;
+    /* padding: 100px; */
+    color: black;
+    margin: 10px;
+  }
+  
+
+  .card:hover{
+    height: 400px;
+  }
+
+  .card .img-box{
+    position: absolute;
+    width: 250px;
+    height: auto;
+    top: 0px;
+    transition: all 0.8s;
+  }
+
+  .card:hover .img-box{
+    top: -100px;
+    scale: 0.75;
+  }
+
+  .card .img-box img{
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+    align-items: center;
+    margin-left: 42px;
+  }
+
+  .card .content{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    position: absolute;
+    top: 250px;
+    width: 100%;
+    padding: 0px 30px;
+    text-align: center;
+    height: 30px;
+    overflow: hidden; 
+    transition: 1s;
+    
+  }
+  
+
+  .card:hover .content{
+    top: 120px;
+    height: 250px;
+  }
+
+  .content li{
+    padding: 3px;
+  }
+
+  .content h2{
+    position: relative;
+    bottom: 5px;
+  }
+
+  .card-baixo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+ .idolos{
     margin-top: 7rem;
     display: flex;
     flex-direction: column;
@@ -341,6 +426,7 @@ main a:hover {
     font-size: 26px;
     width: 900px;
 }
+/*
 
 .fotos-linha1{
     display: flex;
@@ -440,7 +526,7 @@ main a:hover {
     height: 200px;
     font-family: inter;
 }
-
+*/
 .texto-elenco{
     line-height: 1.8rem;
     margin-top: 5rem;
@@ -453,7 +539,7 @@ main a:hover {
     display: flex;
     justify-content: center;
     text-align: center;
-}
+} 
 
 /* .carousel-container {
     width: 16500px; 
