@@ -62,6 +62,21 @@ body{
     font-family: 'Montserrat';
     margin: 14px;
 }
+.box-input select{
+    width: 150px;
+    height: 25px;
+    border-radius: 15px;
+    border: 1px solid #daa520;
+    background-color: transparent;
+    color: #daa520;
+    font-size: 14px;
+    font-family: 'Inter';
+}
+.box-input option{
+    font-family: 'Inter';
+    color: #daa520;
+    background-color: black;
+}
 .box-input input {
     width: 280px;
     border: none;
@@ -88,6 +103,7 @@ body{
     margin-left: 95px;
     font-family: 'Inter';
     transition: 0.7s;
+    margin-top: 10px;
 }
 
 .box-r button:hover{

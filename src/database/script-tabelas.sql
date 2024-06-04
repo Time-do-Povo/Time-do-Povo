@@ -6,54 +6,54 @@
 comandos para mysql server
 */
 
-CREATE DATABASE aquatech;
+create database projetoIndividual;
+use projetoIndividual;
 
-USE aquatech;
+create table idolos(
+idIdolos int primary key auto_increment,
+nomes varchar(45));
 
-CREATE TABLE empresa (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	razao_social VARCHAR(50),
-	cnpj CHAR(14)
+insert into idolos (nomes) value 
+('Sócrates'),
+('Marcelinho Carioca'),
+('Cássio'),
+('Neto'),
+('Rivellino'),
+('Emerson Sheik');
+
+create table usuario(
+idUsuario int primary key auto_increment,
+nome varchar(45),
+email varchar(264),
+senha varchar(45),
+apelido varchar(45),
+fkIdolos int,
+constraint fkIdoloUsuario foreign key (fkIdolos) references idolos(idIdolos)
 );
 
-CREATE TABLE usuario (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50),
-	fk_empresa INT,
-	FOREIGN KEY (fk_empresa) REFERENCES empresa(id)
+
+
+create table registro(
+idRegistro int primary key auto_increment,
+acertos int,
+fkUsuario int,
+constraint fkRegistroUsuario foreign key (fkUsuario) references usuario(idUsuario),
+dtRegistro date);
+
+create table respostas(
+idResposta int primary key auto_increment,
+respostas varchar (100)
 );
 
-CREATE TABLE aviso (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	titulo VARCHAR(100),
-	descricao VARCHAR(150),
-	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
+
+create table perguntas(
+idPergunta int primary key auto_increment,
+perguntas varchar (100),
+fkRespostas int,
+constraint fkPerguntasRespostas foreign key (fkRespostas) references respostas(idResposta)  
 );
 
-create table aquario (
-/* em nossa regra de negócio, um aquario tem apenas um sensor */
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	descricao VARCHAR(300),
-	fk_empresa INT,
-	FOREIGN KEY (fk_empresa) REFERENCES empresa(id)
-);
 
-/* esta tabela deve estar de acordo com o que está em INSERT de sua API do arduino - dat-acqu-ino */
-
-create table medida (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	dht11_umidade DECIMAL,
-	dht11_temperatura DECIMAL,
-	luminosidade DECIMAL,
-	lm35_temperatura DECIMAL,
-	chave TINYINT,
-	momento DATETIME,
-	fk_aquario INT,
-	FOREIGN KEY (fk_aquario) REFERENCES aquario(id)
-);
-
-insert into empresa (razao_social, cnpj) values ('Empresa 1', '00000000000000');
-insert into aquario (descricao, fk_empresa) values ('Aquário de Estrela-do-mar', 1);
+select * from idolos;
+select * from usuario;
+select * from registro;

@@ -2,81 +2,164 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz | Time do Povo</title>
-    <link rel="stylesheet" href="../QUIZ/quiz.css">
-    <link rel="icon" href="img/Projeto Individual (2).png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz | Time do Povo</title>
+  <link rel="stylesheet" href="../QUIZ/quiz.css">
+  <link rel="icon" href="img/Projeto Individual (2).png">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
-    <header>
+  <header>
 
 
 
-        <div class="linha">
+    <div class="linha">
 
+    </div>
+    <nav>
+      <a href="../index.html">
+        <img src="img/logoBranco.png" alt="">
+      </a>
+      <ul class="nav-list">
+        <li><a href="">Quiz</a></li>
+        <li><a href="">&</a></li>
+        <li><a href="">Ranking</a></li>
+      </ul>
+      <div class="usuario">
+        <a href="">
+          <img src="IMG/Protótipo Site Individual.png" alt="">
+          <p id="nomeU"></p>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="box-quiz">
+      <div id="boxParte2" class="quiz" style="display: none;">
+        <h2 id="question">Question goes here</h2>
+        <div id="answer-buttons">
+          <button class="btn">Answer 1</button>
+          <button class="btn">Answer 2</button>
+          <button class="btn">Answer 3</button>
+          <button class="btn">Answer 4</button>
         </div>
-        <nav>
-            <a href="../index.html">
-                <img src="img/logoBranco.png" alt="">
-            </a>
-            <ul class="nav-list">
-                <li><a href="">Quiz</a></li>
-                <li><a href="">&</a></li>
-                <li><a href="">Ranking</a></li>
-            </ul>
-            <div class="usuario">
-                <a href="">
-                    <img src="IMG/Protótipo Site Individual.png" alt="">
-                    <p id="nomeU"></p>
-                </a>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <div class="box-quiz">
-            <div id="boxParte2" class="quiz" style="display: none;">
-                <h2 id="question"8>Question goes here</h2>
-                <div id="answer-buttons">
-                    <button class="btn">Answer 1</button>
-                    <button class="btn">Answer 2</button>
-                    <button class="btn">Answer 3</button>
-                    <button class="btn">Answer 4</button>
-                </div>
-                <button id="next-btn">Next</button>
-            </div>
-            <div id="boxParte1">
-                <div class="texto-quiz">
-                    <p><b>Este quiz foi feito para testar seus conhecimentos sobre o Sport Clube Corinthians Paulista
-                            <br><br><br> Após responder as 10 perguntas, você poderá ver o seu resultado e o dos demais
-                            participantes</b> </p>
-                </div>
-                <div class="botao-iniciar">
-                    <button onclick="comecarQuiz()"><b>Iniciar</b></button>
-                </div>
-            </div> 
-
-            
+        <button id="next-btn">Next</button>
+      </div>
+      <div id="boxParte1">
+        <div class="texto-quiz">
+          <p><b>Este quiz foi feito para testar seus conhecimentos sobre o Sport Clube Corinthians Paulista
+              <br><br><br> Após responder as 10 perguntas, você poderá ver o seu resultado e o dos demais
+              participantes</b> </p>
         </div>
-
-        <div class="box-rank">
-
+        <div class="botao-iniciar">
+          <button onclick="comecarQuiz()"><b>Iniciar</b></button>
         </div>
-        <script src="quiz.js"></script>
-    </main>
+      </div>
+
+
+    </div>
+
+    <div class="box-rank">
+      <div class="grafico1">
+        <canvas id="gf1"></canvas>
+      </div>
+      <div class="grafico2">
+        <canvas id="gf2"></canvas>
+      </div>
+    </div>
+    <script src="quiz.js"></script>
+  </main>
 </body>
 
 </html>
 
 <script>
-    let nomeUsuario = sessionStorage.APELIDO_USUARIO
-    nomeU.innerHTML = nomeUsuario
+  let nomeUsuario = sessionStorage.APELIDO_USUARIO
+  nomeU.innerHTML = nomeUsuario
 
-    function comecarQuiz() {
-        boxParte1.style.display = "none"
-        boxParte2.style.display = "block"
+  function comecarQuiz() {
+    boxParte1.style.display = "none"
+    boxParte2.style.display = "block"
+  }
+
+  fetch("/dash/dash", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }).then(function (res) {
+    return res.json()
+  }).then(function (data) {
+
+    const ctx = document.getElementById('gf1').getContext('2d');
+    ctx.canvas.weight = 300;
+    ctx.canvas.height = 145;
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [data[0].nomes, data[1].nomes, data[2].nomes, data[3].nomes, data[4].nomes, data[5].nomes],
+        datasets: [{
+          label: 'Ídolos prediletos',
+          data: [data[0].qtdUsuario, data[1].qtdUsuario, data[2].qtdUsuario, data[3].qtdUsuario, data[4].qtdUsuario, data[5].qtdUsuario],
+          borderWidth: 1,
+          backgroundColor: '#daa520',
+          color: '#fff',
+          borderRadius: '36px',
+
+        }]
+      },
+      options: {
+        scales: {
+          x: {
+            ticks: {
+              font: {
+                size: 15,
+                weight: '450',
+                family: 'Roboto',
+              },
+              color: '#fff',
+            }
+          },
+          y: {
+            ticks: {
+              font: {
+                size: 14,
+                weight: '200',
+                family: 'Roboto',
+              },
+              color: '#fff',
+            },
+          }   
+        }
+      }
+    });
+  })
+
+  const ctx = document.getElementById('gf2').getContext('2d');
+    ctx.canvas.weight = 250;
+    ctx.canvas.height = 120;
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
     }
-    
+  });
+
 </script>

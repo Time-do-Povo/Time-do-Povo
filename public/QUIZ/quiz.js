@@ -1,7 +1,7 @@
 const question = [
     {
         question: "Em que ano o Corinthians foi fundado?",
-        answers: [
+        answer: [
             { text: "1905", correct: false },
             { text: "1910", correct: true },
             { text: "1912", correct: false },
@@ -11,7 +11,7 @@ const question = [
     {
 
         question: "Quem fez o gol no final do Mundial de 2012?",
-        answers: [
+        answer: [
             { text: "Paulinho", correct: false },
             { text: "Emerson Sheik", correct: false },
             { text: "Danilo", correct: false },
@@ -20,7 +20,7 @@ const question = [
     },
     {
         question: "Qual jogador estrangeiro possui mais gols pelo Corinthians?",
-        answers: [
+        answer: [
             { text: "Romero", correct: true },
             { text: "Paolo Guerrero", correct: false },
             { text: "Carlos Tévez", correct: false },
@@ -30,7 +30,7 @@ const question = [
     {
 
         question: "Quantos títulos estaduais o Corinthians ganhou?",
-        answers: [
+        answer: [
             { text: "30", correct: true },
             { text: "29", correct: false },
             { text: "33", correct: false },
@@ -39,7 +39,7 @@ const question = [
     },
     {
         question: "Quem é o maior artilheiro do Corinthians?",
-        answers: [
+        answer: [
             { text: "Marcelinho Carioca", correct: false },
             { text: "Sócrates", correct: false },
             { text: "Cláudio Christóvam", correct: true },
@@ -48,7 +48,7 @@ const question = [
     },
     {
         question: "Qual era o técnico do Corinthians no titúlo de Mundial de 2012?",
-        answers: [
+        answer: [
             { text: "Mano Menezes", correct: false },
             { text: "Vitor Pereira", correct: false },
             { text: "Tite", correct: true },
@@ -57,7 +57,7 @@ const question = [
     },
     {
         question: "Qual é o mascote do Corinthians?",
-        answers: [
+        answer: [
             { text: "Gavião", correct: false },
             { text: "Gambá", correct: false },
             { text: "Seu Jorge", correct: false },
@@ -66,7 +66,7 @@ const question = [
     },
     {
         question: "Qual o jogador do Corinthians que fez os dois gols para o titúlo da copa Libertadores?",
-        answers: [
+        answer: [
             { text: "Romarinho", correct: false },
             { text: "Emerson Sheik", correct: true },
             { text: "Paulinho", correct: false },
@@ -75,7 +75,7 @@ const question = [
     },
     {
         question: "Quantos titúlos o Corinthians ganhou da Copa do Brasil?",
-        answers: [
+        answer: [
             { text: "4", correct: false },
             { text: "3", correct: true },
             { text: "2", correct: false },
@@ -84,7 +84,7 @@ const question = [
     },
     {
         question: "Quais anos o Corinthians ganhou o Mundial de Clubes?",
-        answers: [
+        answer: [
             { text: "2012, 1998", correct: false },
             { text: "2012, 2003", correct: false },
             { text: "2012, 2000", correct: true },
@@ -114,7 +114,7 @@ function showQuestion() {
     let questionNO = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNO + ". " + currentQuestion.question;
 
-    currentQuestion.answers.forEach(answer => {
+    currentQuestion.answer.forEach(answer => {
         const button = document.createElement("button");
         button.innerHTML = answer.text;
         button.classList.add("btn");
@@ -180,16 +180,18 @@ nextButton.addEventListener("click", () => {
 startQuiz();
 
 function guardarBanco() {
+    var idUsuario = sessionStorage.ID_USUARIO
     fetch("../quiz/registrar", {
         method: "POST",
         headers: {
             "Content-Type": "appLication/json"
         },
         body: JSON.stringify({
-            scoreServer: score 
+            scoreServer: score, 
+            idUsuarioServer: idUsuario
         })
     }).then(function (resposta) {
-        console.log("Resposta do cadastro", resposta)
+        console.log("Resposta do score", resposta)
     }).catch(function (erro) {
         console.log("Erro", erro)
     })

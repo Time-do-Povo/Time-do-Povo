@@ -26,6 +26,16 @@
                 <input type="password" id="input_confirmar_senha">
                 <p>Apelido ou como quer ser chamado:</p>
                 <input type="text" id="input_apelido">
+                <p>Ídolo preferido:</p>
+                <select id="select_idolo">
+                    <option value="#">Selecione seu ídolo</option>
+                    <option value="1">Sóctates</option>
+                    <option value="2">Marcelinho Carioca</option>
+                    <option value="3">Cássio</option>
+                    <option value="4">Neto</option>
+                    <option value="5">Rivellino</option>
+                    <option value="6">Emerson Sheik</option>
+                </select>
             </div>
             <button onclick="cad()"> <b> Cadastrar</b></button>
         </div>
@@ -40,8 +50,9 @@
         const senha = input_senha.value;
         const confirmarSenha = input_confirmar_senha.value;
         const apelido = input_apelido.value;
+        const idolos = select_idolo.value
 
-        if(nome == '' || email == '' || senha == '' || confirmarSenha == '' || apelido == ''){
+        if(nome == '' || email == '' || senha == '' || confirmarSenha == '' || apelido == '' || idolos == '#'){
             alert("Preenchea todos os campos")
 
         }else {
@@ -54,7 +65,8 @@
                     nomeServer: nome,
                     emailServer: email,
                     senhaServer: senha,
-                    apelidoServer: apelido
+                    apelidoServer: apelido,
+                    idolosServer: idolos
                 })
             }).then(function (resposta)
                 {
