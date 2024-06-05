@@ -20,7 +20,7 @@ GROUP BY
 
 function capturarRegistroQuiz(idUsuario) {
     var instrucaoSql = `
-        select acertos, time(dtRegistro) as hora from registro where fkUsuario = ${idUsuario} order by idRegistro desc limit 5;
+        select acertos, time(dtRegistro) as hora from registro where fkUsuario = ${idUsuario} order by idRegistro desc limit 7;
     `;
     return database.executar(instrucaoSql);
 }

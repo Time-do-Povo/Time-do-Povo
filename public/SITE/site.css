@@ -426,107 +426,7 @@ main a:hover {
     font-size: 26px;
     width: 900px;
 }
-/*
 
-.fotos-linha1{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.foto-idolos-linha1 img{
-    border-radius: 10px;
-    width: 200px;
-    height: 200px;
-}
-
-.nome-jogadores-linha1{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    
-}
-.nome-jogadores1{
-    border: none;
-    background-color: #000000;
-    border-radius: 10px;
-    padding: 0.2rem 0.5rem;
-    margin-left: 32px;
-    margin-right: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 8rem;
-    height: 2.8rem;
-    color: #ffffff;
-    font-size: 20px;
-    font-family: 'Inter';
-    letter-spacing: 1px;
-    font-weight: 700;
-    transition: 0.5s;
-    text-align: center;
-}
-
-.textos-idolos-linha1{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.textos-idolos1{
-    border-radius: 10px;
-    width: 300px;
-    height: 200px;
-    font-family: inter;
-}
-.fotos-linha2{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.foto-idolos-linha2 img{
-    border-radius: 10px;
-    width: 200px;
-    height: 200px;
-}
-
-.nome-jogadores-linha2{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    
-}
-.nome-jogadores2{
-    border: none;
-    background-color: #000000;
-    border-radius: 10px;
-    padding: 0.2rem 0.5rem;
-    margin-left: 32px;
-    margin-right: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 8rem;
-    height: 2.8rem;
-    color: #ffffff;
-    font-size: 20px;
-    font-family: 'Inter';
-    letter-spacing: 1px;
-    font-weight: 700;
-    transition: 0.5s;
-    text-align: center;
-}
-
-.textos-idolos-linha2{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.textos-idolos2{
-    border-radius: 10px;
-    width: 300px;
-    height: 200px;
-    font-family: inter;
-}
-*/
 .texto-elenco{
     line-height: 1.8rem;
     margin-top: 5rem;
@@ -541,46 +441,6 @@ main a:hover {
     text-align: center;
 } 
 
-/* .carousel-container {
-    width: 16500px; 
-    overflow: hidden; 
-    position:relative ; 
-  }
-  
-  .carousel-slide {
-    display: flex;
-    transition: transform 0.5s ease-in-out; 
-  }
-  
-  .carousel-slide img {
-    width: 500px;
-    
-    object-fit: scale-down;
-  }
-  
-  .carousel-prev,
-  .carousel-next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
-    border: none;
-    z-index: 1;
-  }
-  
-  .carousel-prev {
-    left: 0;
-  }
-  
-  .carousel-next {
-    right: 15000px;
-  }
-   */
-
-   /* styles.css */
 .carousel {
     position: relative;
     width: 880px;
@@ -626,10 +486,10 @@ main a:hover {
 .footer img{
     position: relative;
     top: -50px;
-    width: 400px;
-    height: 250px;
+    width: 250px;
+    height: 100px;
     display: flex;
-    margin-left: 550px;
+    margin-left: 650px;
 }
 
 .footer-texto{
@@ -647,9 +507,10 @@ main a:hover {
     justify-content: flex-end;
     margin-right: 50px;
     color: #ffffff;
+    margin-top: 10px;
 }
 
 .contato h2 {
     position: relative;
-    top: 100px;
+    top: 30px;
 }

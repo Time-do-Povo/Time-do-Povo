@@ -109,3 +109,10 @@ body{
 .box-r button:hover{
     background-color: white;
 }
+
+#dia{
+    width: 100px;
+    height: 100px;
+}
+
+.oi{}

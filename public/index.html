@@ -23,7 +23,7 @@
                 <li><a href="#scroll_2">História</a></li>
                 <li><a href="#scroll_3">Ídolos</a></li>
                 <li><a href="#scroll_4">Elenco</a></li>
-                <button class="nav-button"><a href ="./LOGIN/login.html">Entrar</a></button>
+                <button class="nav-button"><a href="./LOGIN/login.html">Entrar</a></button>
             </ul>
         </nav>
     </header>
@@ -41,8 +41,23 @@
             </div>
         </div>
         <div><br><br><br><br><br><br><br><br><br></div>
-        <div id="scroll_2"></div>
-        <div><br></div>
+        <div class="historia">
+            <div class="imagem-historia">
+                <img src="img/img.torcida.crianca.jpg">
+            </div>
+            <div class="texto-historia">
+                <h1><b>Desde o berço</b></h1><br>
+                <p><b>
+                        Com 30,4 milhões de torcedores no ano de 2024, o Corinthians é o segundo colocado coma maior
+                        torcida do Brasil, e isso só tende a aumentar, afinal como o fundador do site, muitas crianças
+                        já nascem com o sangue Corinthiano. Esse fanátismo pelo time sem dúvidas nenhuma não vem só de
+                        berço mas sim de gerações e comigo não foi diferente, meu ex-grande amigo e avô Paulo que trouxe
+                        esse amor pelo time e também pelo esporte, e será uma honra passar esse amor em diante, então
+                        por meio desse site, conheça mais sobre essa história linda.
+                    </b>
+                </p>
+            </div>
+        </div><br><br>
         <div class="torcida">
 
             <div class="texto-torcida">
@@ -59,6 +74,7 @@
             </div>
             <br><br><br>
         </div>
+        <div id="scroll_2"><br></div>
         <div class="historia">
             <div class="imagem-historia">
                 <img src="img/img.fotoHistoria.jpeg">
@@ -114,7 +130,7 @@
                             <h2>Sócrates</h2>
                             <li>Nome Completo: Sócrates Brasileiro Sampaio <br> de Souza Vieira de Oliveira </li>
                             <li>Apelidos: Doutor</li>
-                            <li>Nascimento: 19/02/1954</li>     
+                            <li>Nascimento: 19/02/1954</li>
                             <li>Jogos pelo Corinthians: 298</li>
                             <li>Gols marcados: 172 </li>
                             <li> Conquistas pelo Corinthians: <br>
@@ -154,7 +170,8 @@
                             <li>Nascimento: 06/06/1987</li>
                             <li>Jogos pelo Corinthians: 712</li>
                             <li>Resultados: 316 vitórias, 217 empates e 179 derrotas</li>
-                            <li>Conquistas pelo Corinthians: Paulista 2019, Paulista 2018,<br> Paulista 2017, Brasileirão
+                            <li>Conquistas pelo Corinthians: Paulista 2019, Paulista 2018,<br> Paulista 2017,
+                                Brasileirão
                                 <br> 2017, Brasileirão 2015,<br> Paulista 2013,
                                 Recopa 2013,<br> Libertadores 2012, Mundial <br> de Clubes 2012
                             </li>
@@ -177,7 +194,7 @@
                             <li>Gols marcados: 80</li>
                             <li>Conquistas pelo Corinthians:
                                 Campeonato Brasileiro de 1990 e Campeonato Paulista de 1997</li>
-    
+
                         </b>
                     </div>
                 </div>
@@ -211,9 +228,9 @@
                             <li>Jogos pelo Corinthians: 177</li>
                             <li>Gols marcados: 28</li>
                             <li>Conquistas pelo Corinthians:
-                                Campeonato Brasileiro 2011, Copa Libertadores da América 2012, Mundial de Clubes 2012,
-                                Campeonato Paulista 2013 e Recopa Sul-Americana 2013.</li>
-    
+                                Campeonato Brasileiro 2011, Copa Libertadores da América 2012, Mundial de Clubes 2012
+                            </li>
+
                         </b>
                     </div>
                 </div>
@@ -266,7 +283,7 @@
             </div>
             <br><br><br>
         </div>
-        <div class="footer">
+        <footer class="footer">
             <div class="contato">
                 <h2>Para sugestão ou dúvida, entre em contato com: <br>
                     sergio.emilianofo@sptech.school</h2>
@@ -278,8 +295,9 @@
             <div class="footer-texto">
                 <h1>Desde 2024, o Time do Povo é feito por Corinthianos para Corinthianos </h1>
             </div>
-        </div>
+        </footer>
     </main>
+   
 </body>
 
 </html>
@@ -309,9 +327,10 @@
     }
 
     updateCarousel();
-    function get(){
+    function get() {
         indow.location.href = '../public/cad.html';
     }
+
 
     // document.addEventListener("DOMContentLoaded", function () {
     //     const prevBtn = document.querySelector('.carousel-prev');
