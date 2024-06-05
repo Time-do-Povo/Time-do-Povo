@@ -15,6 +15,19 @@ function dashIdolos(req, res) {
     });
 }
 
+function capturarRegistroQuiz(req, res) {
+    var idUsuario = req.body.idUsuarioServer;
+   
+
+    dashModel.capturarRegistroQuiz(idUsuario).then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    })
+}
 module.exports = {
-    dashIdolos
+    dashIdolos,
+    capturarRegistroQuiz
 }

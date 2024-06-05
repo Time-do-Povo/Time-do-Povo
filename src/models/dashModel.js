@@ -18,6 +18,14 @@ GROUP BY
     return database.executar(instrucaoSql);
 }
 
+function capturarRegistroQuiz(idUsuario) {
+    var instrucaoSql = `
+        select acertos, time(dtRegistro) as hora from registro where fkUsuario = ${idUsuario} order by idRegistro desc limit 5;
+    `;
+    return database.executar(instrucaoSql);
+}
+
 module.exports = {
-    dashIdolos
+    dashIdolos,
+    capturarRegistroQuiz
 }

@@ -8,5 +8,8 @@ router.get("/dash", function (req, res) {
     dashController.dashIdolos(req, res);
 })
 
+router.post("/capturarRegistroQuiz", function (req, res) {
+    dashController.capturarRegistroQuiz(req, res);
+});
 
 module.exports = router;

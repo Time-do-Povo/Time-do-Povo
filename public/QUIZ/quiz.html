@@ -11,7 +11,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body>
+<body onload="capturarRegistroQuiz()">
   <header>
 
 
@@ -133,33 +133,61 @@
               },
               color: '#fff',
             },
-          }   
+          }
         }
       }
     });
   })
 
   const ctx = document.getElementById('gf2').getContext('2d');
-    ctx.canvas.weight = 250;
-    ctx.canvas.height = 120;
+  ctx.canvas.weight = 250;
+  ctx.canvas.height = 120;
 
-  new Chart(ctx, {
+  const grafico2 = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      labels: [],
       datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
-        borderWidth: 1
+        label: 'Ultimos acertos',
+        data: [],
+        borderWidth: 3,
+        borderColor: '#daa520'
       }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
     }
   });
+  function capturarRegistroQuiz() {
+    let idUsuario = sessionStorage.ID_USUARIO
+    fetch("/dash/capturarRegistroQuiz", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        idUsuarioServer: idUsuario
+      })
+    }).then(function (resposta) {
 
+      if (resposta.ok) {
+        resposta.json().then(function (resposta) {
+          resposta.reverse()
+          plotarGraf(resposta)
+
+
+        });
+      }
+    })
+  }
+
+  function plotarGraf(resposta) {
+  
+    for (let posicao = 0; posicao < resposta.length; posicao++) {
+      let novoDado = resposta[posicao];
+
+      grafico2.data.labels.push(novoDado.hora)
+      grafico2.data.datasets[0].data.push(novoDado.acertos)
+
+    }
+
+    grafico2.update()
+  }
 </script>
