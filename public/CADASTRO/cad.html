@@ -7,6 +7,7 @@
     <title>Cadastre-se | Time do Povo</title>
     <link rel="stylesheet" href="./cadastro.css">
     <link rel="icon" href="IMG/Projeto Individual (2).png">
+    <script src="https://kit.fontawesome.com/1f12696c43.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -42,11 +43,12 @@
             <button onclick="cad()"> <b> Cadastrar</b></button>
         </div>
     </div>
-    <!-- <dialog id="dia">
-        <div class="">
-            <h2>oi</h2>
+    <dialog id="modal_cadastro">
+        <div class="modal">
+            <h2>Cadastro realizado com sucesso</h2>
+            <i class="fa-solid fa-square-check" style="color: #63E6BE;"></i>
         </div>
-    </dialog> -->
+    </dialog>
 </body>
 
 </html>
@@ -88,7 +90,7 @@
             }
         }
 
-        if (!num || !minuscula || !maiuscula || senha.length < 5) {
+        if (!num || !minuscula || !maiuscula || senha.length < 6) {
             alert('Senha inválida! Senha precisa ter no mínimo 6 caracteres, letras minúsculas e maiúsculas e no mínimo um número')
         }else if( confirmarSenha != senha){
             alert('As senhas não estão iguais!')
@@ -115,8 +117,13 @@
             }).catch(function (erro) {
                 console.log("Erro", erro)
             })
+          
+            modal_cadastro.showModal()
+            setInterval(function cadastroRealizado(){
             window.location.href = '../LOGIN/login.html';
-            // dia.showModal()
+        }, 2500)
+            
         }
+        
     }
 </script>
