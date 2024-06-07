@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./cadastro.css">
     <link rel="icon" href="IMG/Projeto Individual (2).png">
 </head>
+
 <body>
     <div class="box-cadastro">
         <div class="box-l">
@@ -46,10 +48,11 @@
         </div>
     </dialog> -->
 </body>
+
 </html>
 
 <script>
-    function cad(){
+    function cad() {
         const nome = input_nome.value;
         const email = input_email.value;
         const senha = input_senha.value;
@@ -57,10 +60,44 @@
         const apelido = input_apelido.value;
         const idolos = select_idolo.value
 
-        if(nome == '' || email == '' || senha == '' || confirmarSenha == '' || apelido == '' || idolos == '#'){
+        if (nome == '' || email == '' || senha == '' || confirmarSenha == '' || apelido == '' || idolos == '#') {
             alert("Preenchea todos os campos")
 
-        }else {
+        }
+
+        let maiuscula = false;
+        let minuscula = false;
+        let num = false;
+        let senhaOk = false;
+
+        for (let posicao = 0;
+            posicao < senha.length;
+            posicao++
+        ) {
+            let char = senha[posicao]
+
+            if (char >= 0 || char <= 9) {
+                num = true
+            }
+
+            if (char >= 'a' || char <= 'z') {
+                minuscula = true
+            }
+            if (char >= 'A' || char <= 'Z') {
+                maiuscula = true
+            }
+        }
+
+        if (!num || !minuscula || !maiuscula || senha.length < 5) {
+            alert('Senha inválida! Senha precisa ter no mínimo 6 caracteres, letras minúsculas e maiúsculas e no mínimo um número')
+        }else if( confirmarSenha != senha){
+            alert('As senhas não estão iguais!')
+        }else{
+            senhaOk = true
+        }
+
+        if (senhaOk) {
+
             fetch("../usuarios/cadastrar", {
                 method: "POST",
                 headers: {
@@ -73,14 +110,12 @@
                     apelidoServer: apelido,
                     idolosServer: idolos
                 })
-            }).then(function (resposta)
-                {
-                    console.log("Resposta do cadastro", resposta)
-                }).catch (function (erro)
-                    {
-                        console.log("Erro", erro)
-                    })
-                    window.location.href = '../LOGIN/login.html'; 
+            }).then(function (resposta) {
+                console.log("Resposta do cadastro", resposta)
+            }).catch(function (erro) {
+                console.log("Erro", erro)
+            })
+            window.location.href = '../LOGIN/login.html';
             // dia.showModal()
         }
     }

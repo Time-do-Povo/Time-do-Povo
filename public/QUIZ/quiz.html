@@ -26,7 +26,7 @@
       <ul class="nav-list">
         <li><a href="">Quiz</a></li>
         <li><a href="">&</a></li>
-        <li><a href="">Ranking</a></li>
+        <li><a href="">Plataforma</a></li>
       </ul>
       <div class="usuario">
         <a href="">
@@ -63,6 +63,11 @@
 
     </div>
 
+    <div class="box-media">
+      <h1>Sua média de acertos é:</h1>
+      <br>
+      <h2 id="h2_media"></h2>
+    </div>
     <div class="box-rank">
       <div class="grafico1">
         <canvas id="gf1"></canvas>
@@ -179,15 +184,24 @@
   }
 
   function plotarGraf(resposta) {
-  
+    let somaTotal = 0
+    let media = 0
+
     for (let posicao = 0; posicao < resposta.length; posicao++) {
       let novoDado = resposta[posicao];
+      somaTotal += novoDado.acertos
 
       grafico2.data.labels.push(novoDado.hora)
       grafico2.data.datasets[0].data.push(novoDado.acertos)
 
+      media = somaTotal/ resposta.length
+      plotarMedia(media)
     }
 
     grafico2.update()
+  }
+
+  function plotarMedia(media) {
+    h2_media.innerHTML = media.toFixed(2)
   }
 </script>
