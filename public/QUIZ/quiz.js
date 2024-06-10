@@ -154,7 +154,9 @@ function selectAnswer(e) {
 
 function showScore() {
     resetState();
-    questionElement.innerHTML = `<span style="display: flex; align-items: center; flex-direction: column; margin-top:100px; font-size:40px">Você pontuou ${score} de ${question.length}!</span>`;
+    questionElement.innerHTML = `<span style="display: flex; align-items: center; 
+    flex-direction: column; margin-top:100px; font-size:40px">
+    Você pontuou ${score} de ${question.length}!</span>`;
     nextButton.innerHTML = "Jogue novamente";
     nextButton.style.display = "block";
     guardarBanco()
